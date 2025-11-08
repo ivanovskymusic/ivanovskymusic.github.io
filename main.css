@@ -1,50 +1,45 @@
 body {
-    font-family: Helvetica;
-    color: white;
+    height: 100vh; 
     margin: 0 auto;
-    background-color: black;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
+    color: white;
+    background: url("surf_less_exposure.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
 }
 
 .content {
-    padding: 2rem;
-    flex: 2;
+    padding: 3em;
+    width: 400px;
+    margin: 0 auto; 
+    text-align: center;
+    font-family: 'Heebo', sans-serif;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: space-between; 
-    box-sizing: border-box;
+    height: 85vh; 
 }
 
 h1 { 
-    margin-block-start: 0em;
-    margin-block-end: 0em; 
-    font-weight: 100; 
-    font-size: 4.5rem;
-    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    letter-spacing: 0.825rem;
+    width: calc(100% + 0.825rem);
+    font-size: 2.25em;
+    line-height: 1.375;
+    font-weight: 700;
 }
-h2 { 
-    margin-block-end: 0em; 
-    font-weight: 200; 
-    font-size: 2rem;
+p { 
+    justify-content: center;
+    gap: 0.625rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    letter-spacing: 0.225rem;
+    margin-right: -0.225rem;
+    /* font-size: 0.625em; */
+    font-size: 0.7em;
+    font-weight: 700;
 }
 
-p { letter-spacing: 0.05rem }
-a { color: darkcyan }
-
-iframe {
-    width: 100%; 
-    height: 800px;
-    border-radius: 0px; 
-    border: 1px solid rgba(255, 255, 255, 0); 
-}
-
-.photo { flex: 3; padding: 2rem; text-align: center; }
-img { max-width: 100%; height: auto; object-fit: cover }
-
-@media (max-width: 768px) {
-    body {  flex-direction: column; }
-    .content { padding: 2rem; flex: none; height: auto; }
-    .photo { flex: none; order: 2; }
-}
+a { color: white }
