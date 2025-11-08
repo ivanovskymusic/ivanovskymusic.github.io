@@ -9,8 +9,8 @@ body {
 }
 
 .content {
-    padding: 3em;
-    width: 400px;
+    padding-top: 3em;
+    width: min(400px, 90%);
     margin: 0 auto; 
     text-align: center;
     font-family: 'Heebo', sans-serif;
