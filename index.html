@@ -7,12 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div class="content"> 
+    <div class="slideshow">
+      <div class="slide slide1"></div>
+      <div class="slide slide2"></div>
+      
+    </div>
+    
+    <div id="content"> 
       <div>
         <h1>Ivan Ovsky</h1>
         <p>Composer from London, Ontario.</p>
         <br>
         <iframe
+          id="reel"
           width="100%"
           height="350px"
           frameborder="no"
@@ -23,7 +30,39 @@
       </div>
       <div>
         <p><a href="mailto: ivanovskymusic@gmail.com">ivanovskymusic@gmail.com</a></p>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>        
       </div>
     </div>
+    <script>
+    const slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    const showSlide = (index) => {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    };
+
+    document.querySelector(".prev").addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    document.querySelector(".next").addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    const iframe = document.getElementById("reel");
+    const content = document.getElementById("content")
+    iframe.addEventListener("load", () => {
+      content.style.opacity = 1; // fade in
+      
+    }, 200); 
+
+    showSlide(currentSlide);
+
+  </script>
   </body>
 </html>
