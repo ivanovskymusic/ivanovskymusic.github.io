@@ -8,7 +8,7 @@ body {
 #content {
     opacity: 0;               
     transition: opacity 4s ease; 
-    padding-top: 2em;
+    padding-top: 2.5rem;
     width: min(400px, 90%);
     margin: 0 auto; 
     text-align: center;
@@ -57,7 +57,7 @@ h1 {
     font-size: 2.25em;
     line-height: 1.375;
     font-weight: 700;
-    margin-block-end: 0px;
+    margin-block-end: 1rem;
 }
 p { 
     justify-content: center;
