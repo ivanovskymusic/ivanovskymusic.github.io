@@ -9,14 +9,12 @@ body {
     opacity: 0;               
     transition: opacity 4s ease; 
     padding-top: 2.5rem;
-    width: min(400px, 90%);
     margin: 0 auto; 
     text-align: center;
     font-family: 'Heebo', sans-serif;
     display: flex;
     flex-direction: column; 
-    justify-content: space-between; 
-    height: 85vh; 
+    justify-content: space-between;  
 }
 
 .slide {
